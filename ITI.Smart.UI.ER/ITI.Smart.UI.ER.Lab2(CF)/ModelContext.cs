@@ -29,22 +29,59 @@ namespace ITI.Smart.UI.ER.Lab2_CF_
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Student>().
-               HasRequired(s => s.ContactInfo)
+            modelBuilder.Entity<Student>()
+                 .Property(s => s.FirstName)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            modelBuilder.Entity<Student>()
+            .Property(s => s.LastName)
+                .IsRequired()
+                .HasMaxLength(255);
+            modelBuilder.Entity<Student>()
+            .HasRequired(s => s.ContactInfo)
                .WithRequiredPrincipal(c => c.Student);
 
             modelBuilder.Entity<ContactInfo>().
                 HasRequired(c => c.Student)
                 .WithRequiredDependent(s => s.ContactInfo);
+
+            //////////
+
+            modelBuilder.Entity<Course>()
+               .ToTable("Courses")
+               .HasKey(c => c.Id);
+
+            modelBuilder.Entity<Course>().
+                      Property(c => c.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            modelBuilder.Entity<Course>().
+             HasMany(c => c.Students)
+                .WithMany(s => s.Courses)
+                .Map(c => c.ToTable("StudentCourses"));
+           
+            //////
+            modelBuilder.Entity<School>().
+             ToTable("Schools")
+                .HasKey(sc => sc.Id);
+            modelBuilder.Entity<School>().
+            Property(sc => sc.Name)
+                .IsRequired()
+                .HasMaxLength(255);
+            modelBuilder.Entity<School>().
+            HasMany(sc => sc.Students)
+                .WithRequired(s => s.School)
+                .HasForeignKey(sc => sc.Fk_SchoolId);
+
+
+
             base.OnModelCreating(modelBuilder);
         }
 
     }
 
 
-    //public class MyEntity
-    //{
-    //    public int Id { get; set; }
-    //    public string Name { get; set; }
-    //}
+    
 }

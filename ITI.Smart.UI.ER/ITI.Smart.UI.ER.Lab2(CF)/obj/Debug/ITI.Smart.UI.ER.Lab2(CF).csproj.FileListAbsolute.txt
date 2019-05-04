@@ -14,3 +14,4 @@ D:\ITI\Entity Framework\labs\lab2\ITI.Smart.UI.ER\ITI.Smart.UI.ER.Lab2(CF)\obj\D
 D:\ITI\Entity Framework\labs\lab2\ITI.Smart.UI.ER\ITI.Smart.UI.ER.Lab2(CF)\obj\Debug\ITI.Smart.UI.ER.Lab2_CF_.Migrations.AddRelationStudentSchool.resources
 D:\ITI\Entity Framework\labs\lab2\ITI.Smart.UI.ER\ITI.Smart.UI.ER.Lab2(CF)\obj\Debug\ITI.Smart.UI.ER.Lab2_CF_.Migrations.AddRelationStudentCourse.resources
 D:\ITI\Entity Framework\labs\lab2\ITI.Smart.UI.ER\ITI.Smart.UI.ER.Lab2(CF)\obj\Debug\ITI.Smart.UI.ER.Lab2_CF_.Migrations.AddRelationStudentContactInfo.resources
+D:\ITI\Entity Framework\labs\lab2\ITI.Smart.UI.ER\ITI.Smart.UI.ER.Lab2(CF)\obj\Debug\ITI.Smart.UI.ER.Lab2_CF_.Migrations.UpdateRelations.resources

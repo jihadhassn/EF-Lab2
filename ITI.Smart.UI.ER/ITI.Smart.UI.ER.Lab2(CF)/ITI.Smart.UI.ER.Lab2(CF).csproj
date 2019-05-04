@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201905042144050_AddRelationStudentContactInfo.Designer.cs">
       <DependentUpon>201905042144050_AddRelationStudentContactInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201905042217230_UpdateRelations.cs" />
+    <Compile Include="Migrations\201905042217230_UpdateRelations.Designer.cs">
+      <DependentUpon>201905042217230_UpdateRelations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ModelContext.cs" />
     <Compile Include="Models\ContactInfo.cs" />
@@ -92,6 +96,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201905042144050_AddRelationStudentContactInfo.resx">
       <DependentUpon>201905042144050_AddRelationStudentContactInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201905042217230_UpdateRelations.resx">
+      <DependentUpon>201905042217230_UpdateRelations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
